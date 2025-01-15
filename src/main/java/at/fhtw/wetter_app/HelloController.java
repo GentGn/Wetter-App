@@ -1,7 +1,12 @@
 package at.fhtw.wetter_app;
 
+import at.fhtw.wetter_app.utilities.CityEncoder;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HelloController {
 
@@ -75,7 +80,46 @@ public class HelloController {
 
     @FXML
     protected void onShowCityWithTheHighestTemperatureButtonClick(){
+// Liste der Städte, für die wir das Wetter abfragen möchten
+        List<String> cities = Arrays.asList( "Tokio", "Delhi", "Shanghai", "São Paulo", "Mexico City", "Dhaka", "Kalkutta",
+                "Karachi", "Istanbul", "Buenos Aires", "Chongqing", "Lagos", "Kinshasa", "Tianjin",
+                "Jakarta", "Lagos", "Cairo", "London", "Chengdu", "Lima", "New York City", "Bangkok",
+                "Shenzhen", "Hongkong", "Hyderabad", "Dongguan", "Riyadh", "Chennai", "Guangzhou",
+                "Shijiazhuang", "Kuala Lumpur", "Hong Kong", "Ahmedabad", "Hangzhou", "Xi’an", "Bagdad",
+                "Paris", "Moscow", "Tianjin", "Seoul", "Kiev", "San Salvador", "Jakarta", "Bangalore",
+                "Cairo", "Rome", "Santiago", "Cali", "Kinshasa", "Abidjan", "Peking", "Kolkata", "Ho Chi Minh",
+                "Riyadh", "Dubai", "Lagos", "Tashkent", "Giza", "Baku", "Jinan", "Shenzhen", "Teheran",
+                "Kiev", "Dhaka", "Karachi", "Guangzhou", "Düsseldorf", "Vancouver", "Lahore", "Zhengzhou",
+                "San Francisco", "Chengdu", "Suzhou", "Ho Chi Minh", "Paris", "Istanbul", "Bogotá", "Montreal",
+                "Jakarta", "Jakarta", "Giza", "Nairobi", "Manila", "Casablanca", "Mumbai", "Minsk", "Paris",
+                "Auckland", "Santiago", "Los Angeles", "Jakarta", "Shenzhen", "São Paulo", "Chicago", "Lagos",
+                "Hongkong", "Bangalore", "Hong Kong", "Toronto", "Delhi");
 
+        new Thread(() -> {
+            try {
+
+                // Städtenamen gemäß UTF-8 encoden
+                List<String> encodedCities = CityEncoder.encodeCityNames(cities);
+
+                // Stadt mit der höchsten Temperatur abfragen
+                String hottestCity = WeatherServiceAPI.getCityWithHighestTemperature(encodedCities);
+
+                // Die Wetterdaten für diese Stadt abrufen
+                String response = WeatherServiceAPI.getWeatherData(hottestCity);
+                double temperature = WeatherServiceAPI.parseTemperature(response);
+
+                // Den Stadtnamen und die Temperatur im Ergebnis-Label anzeigen
+                String resultText = "Die Stadt mit der höchsten Temperatur ist: " + hottestCity +
+                        " - Temperatur: " + temperature + "°C";
+
+                // UI-Aktualisierung im JavaFX Application Thread
+                Platform.runLater(() -> {
+                    CityWithTheHighestTemperature.setText(resultText);
+                });
+            } catch (Exception ex) {
+                // Fehlerbehandlung und Anzeige im UI-Thread
+                Platform.runLater(() -> CityWithTheHighestTemperature.setText("Fehler: " + ex.getMessage()));
+            }
+        }).start();  // API-Abfrage in einem neuen Thread
     }
-
 }
