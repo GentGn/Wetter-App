@@ -24,6 +24,9 @@ public class HelloController {
     // Array to cycle through wind data
     private String[] windData;
 
+    @FXML
+    private Label CityWithTheHighestTemperature;
+
 
     public HelloController() {
         // Simulating the API response
@@ -68,6 +71,11 @@ public class HelloController {
 
         // Update index to toggle through wind data
         windInfoIndex = (windInfoIndex + 1) % windData.length;
+    }
+
+    @FXML
+    protected void onShowCityWithTheHighestTemperatureButtonClick(){
+
     }
 
 }
