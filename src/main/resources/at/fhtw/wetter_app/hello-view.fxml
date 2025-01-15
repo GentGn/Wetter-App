@@ -17,8 +17,8 @@
     <Label fx:id="welcomeText" />
     <Button onAction="#onShowWeatherButton" text="Show Weather" />
     <Button onAction="#onHelloButtonClick" text="Hello!" />
-   <Button mnemonicParsing="false" onAction="onShowCityWithTheHighestTemperatureButtonClick" text="Show city with the highest Temperature" />
-   <Label text="City with the highest Temperature:" />
+   <Button mnemonicParsing="false" onAction="#onShowCityWithTheHighestTemperatureButtonClick" text="Show city with the highest Temperature" />
+   <Label fx:id="CityWithTheHighestTemperature" text="City with the highest Temperature:" />
 
     <Button onAction="#onFetchWeatherClick" text="Fetch Weather Data" />
     <Button onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;" text="Toggle Wind Info" />
