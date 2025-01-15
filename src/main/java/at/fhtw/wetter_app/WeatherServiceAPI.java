@@ -5,14 +5,21 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 public class WeatherServiceAPI {
 
-    private static final String API_KEY_MUHAMMAD = "d82d4b74e8b047ecaf5174637240212";
+    private static final String API_KEY = "d82d4b74e8b047ecaf5174637240212";
+    private static final String BASE_URL = "https://api.weatherapi.com/v1/current.json";
+
+    // Methode zur Erstellung der vollständigen URL
+    private static String buildUrl(String city) {
+        return BASE_URL + "?key=" + API_KEY + "&q=" + city + "&lang=de";
+    }
 
     // Methode zur Abfrage der Wetterdaten der API
     public static String getWeatherData(String city) throws IOException {
-        String urlString = "https://api.weatherapi.com/v1/current.json?key=" + API_KEY_MUHAMMAD + "&q=" + city;
+        String urlString = buildUrl(city);
         URL url = new URL(urlString);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
@@ -49,5 +56,26 @@ public class WeatherServiceAPI {
         if (endIndex == -1) endIndex = response.indexOf("}", startIndex);
         String tempString = response.substring(startIndex, endIndex);
         return Double.parseDouble(tempString);
+    }
+
+    // Methode, die für eine Liste von Städten das Wetter abruft und die Stadt mit der höchsten Temperatur zurückgibt
+    public static String getCityWithHighestTemperature(List<String> cities) {
+        String hottestCity = "";
+        double highestTemp = Double.NEGATIVE_INFINITY; // Startwert für die höchste Temperatur
+
+        for (String city : cities) {
+            try {
+                String response = getWeatherData(city);
+                double temperature = parseTemperature(response);
+                if (temperature > highestTemp) {
+                    highestTemp = temperature;
+                    hottestCity = city;
+                }
+            } catch (IOException e) {
+                System.out.println("Fehler beim Abrufen der Wetterdaten für " + city + ": " + e.getMessage());
+            }
+        }
+
+        return hottestCity;
     }
 }
