@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="at.fhtw.wetter_app.HelloController">
+<VBox alignment="CENTER" prefHeight="495.0" prefWidth="389.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhtw.wetter_app.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
     <Label fx:id="conditionLabel" text="Condition: " />
     <Label fx:id="temperatureLabel" text="Temperature: " />
     <Label fx:id="humidityLabel" text="Humidity: " />
     <Label fx:id="uvIndexLabel" text="UV Index: " />
-    <Label fx:id="welcomeText"/>
-    <Button text="Show Weather" onAction="#onShowWeatherButton" />
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
+    <Button onAction="#onShowWeatherButton" text="Show Weather" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <Button mnemonicParsing="false" onAction="#onShowCityWithTheHighestTemperatureButtonClick" text="Show city with the highest Temperature" />
+   <Label fx:id="CityWithTheHighestTemperature" text="City with the highest Temperature:" />
 
-    <Button text="Fetch Weather Data" onAction="#onFetchWeatherClick"/>
-    <Button text="Toggle Wind Info" onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;"/>
-    <Label fx:id="windInfoLabel" text="Wind Info will appear here" wrapText="true"/>
+    <Button onAction="#onFetchWeatherClick" text="Fetch Weather Data" />
+    <Button onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;" text="Toggle Wind Info" />
+    <Label fx:id="windInfoLabel" text="Wind Info will appear here" wrapText="true" />
 
 </VBox>
