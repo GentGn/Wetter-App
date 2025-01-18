@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("7133364.png")));
-        stage.setTitle("Wetter App");
+        stage.setTitle("Weather App");
         stage.setScene(scene);
         stage.show();
     }
