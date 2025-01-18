@@ -15,7 +15,7 @@ Schön, dass du hier bist! Diese kleine, aber feine Anwendung hilft dir dabei, d
   - Windgeschwindigkeit  
 
 - **Temperatur wechseln:**  
-  Celsius oder Fahrenheit? Du entscheidest! Mit einem Klick auf **"Toggle Temperature Unit"** kannst du zwischen den beiden Einheiten wechseln.  
+  Celsius oder Fahrenheit? Mit einem Klick auf **"Toggle Temperature Unit"** kannst du zwischen den beiden Einheiten wechseln.  
 
 - **Winddetails anzeigen:**  
   Möchtest du wissen, wie stark der Wind weht oder aus welcher Richtung er kommt? Der Button **"Toggle Wind Info"** zeigt dir abwechselnd die Geschwindigkeit und die Richtung an.
@@ -33,14 +33,14 @@ Schön, dass du hier bist! Diese kleine, aber feine Anwendung hilft dir dabei, d
 
 1. **Voraussetzungen:**  
    - Stelle sicher, dass Java 17 (oder neuer) installiert ist.  
-   - Die JavaFX-Bibliotheken müssen verfügbar sein (falls du mit einer IDE arbeitest, wie IntelliJ, ist das oft schon integriert).  
+   - Die JavaFX-Bibliotheken müssen verfügbar sein (Wenn sie nicht schon integriert sind).  
 
 2. **Loslegen:**  
    - Öffne die Datei **`HelloApplication.java`** und starte sie.  
    - Es öffnet sich ein übersichtliches Fenster mit Eingabefeld, Buttons und Wetteranzeige.
 
 3. **Bedienung:**  
-   - Stadt eingeben, auf **"Suche Stadt"** klicken – fertig!  
+   - Stadt eingeben, auf **"Search City"** klicken – fertig!  
    - Nutze die Buttons, um zwischen Temperaturanzeigen oder Winddetails zu wechseln oder die heißeste Stadt anzuzeigen.
 
 ---
