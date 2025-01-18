@@ -20,4 +20,13 @@ public class CityEncoder {
         }
         return encodedCities;
     }
+
+    public static String encodeCityName(String city) {
+        try {
+            return URLEncoder.encode(city, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();  // Handle exception for unsupported encoding
+            return null;          // Return null if encoding fails
+        }
+    }
 }
