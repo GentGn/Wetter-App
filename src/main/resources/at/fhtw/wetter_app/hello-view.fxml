@@ -6,24 +6,42 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefWidth="800.0" spacing="20.0" style="-fx-border-color: #000000; -fx-border-width: 2px; -fx-background-color: linear-gradient(to bottom, #87CEEB, #FFD700);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhtw.wetter_app.HelloController">
+<VBox alignment="CENTER" prefWidth="800.0" spacing="20.0"
+      style="-fx-border-color: #000000; -fx-border-width: 2px; -fx-background-color: linear-gradient(to bottom, #87CEEB, #FFD700);"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="at.fhtw.wetter_app.HelloController">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
+    <!-- Text Field for entering city -->
     <TextField fx:id="CityNameField" prefHeight="25.0" prefWidth="183.0" promptText="Enter Cityname" />
+
+    <!-- Button to search city -->
     <Button mnemonicParsing="false" onAction="#onSearchCityButtonClick" text="Search City" />
+
+    <!-- Label for status/feedback about the city's weather details -->
     <Label fx:id="WeatherDetailsForCity" text="Weather details for your City" />
 
+    <!-- Labels to show fetched data -->
     <Label fx:id="conditionLabel" text="Condition: " />
     <Label fx:id="temperatureLabel" text="Temperature: " />
     <Label fx:id="humidityLabel" text="Humidity: " />
     <Label fx:id="uvIndexLabel" text="UV Index: " />
+
+    <!-- Wind info label and button to toggle wind info -->
     <Label fx:id="windInfoLabel" text="Wind Info will appear here" wrapText="true" />
-    <Button onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;" text="Toggle Wind Info" />
+    <Button onAction="#onToggleWindInfoClick"
+            style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;"
+            text="Toggle Wind Info" />
 
+    <!-- Button to fetch city with the highest temperature -->
     <Button mnemonicParsing="false" onAction="#onShowCityWithTheHighestTemperatureButtonClick" text="Show city with the highest Temperature" />
-   <Label fx:id="CityWithTheHighestTemperature" text="City with the highest Temperature:" wrapText="true" VBox.vgrow="ALWAYS" />
+    <Label fx:id="CityWithTheHighestTemperature" text="City with the highest Temperature:" wrapText="true" VBox.vgrow="ALWAYS" />
 
+    <!-- Button to toggle temperature between °C and °F -->
+    <Button text="Toggle Temperature Unit" onAction="#toggleTemperatureUnit"/>
 
 </VBox>

@@ -1,16 +1,36 @@
 package at.fhtw.wetter_app;
 
+/**
+ * Repräsentiert Wetterdaten für eine bestimmte Stadt.
+ * Enthält Attribute wie Wetterzustand, Temperatur, Luftfeuchtigkeit und Windinformationen.
+ */
 public class WeatherData {
 
-    private String condition;
-    private double temperature;
-    private int humidity;
-    private double uvIndex;
+    private String condition;  // Wetterzustand (z. B. Sonnig, Wolkig)
+    private double temperature; // Temperatur in Celsius
+    private int humidity;       // Luftfeuchtigkeit in Prozent
+    private double uvIndex;     // UV-Index
+    private double windKph;     // Windgeschwindigkeit in km/h
+    private String windDir;     // Windrichtung
+    private String cityName;    // Name der Stadt
 
-    private double windKph;  // Wind speed in kph
-    private String windDir; // Wind direction
-    private String cityName;
+    /**
+     * Standardkonstruktor (erforderlich für Jackson).
+     */
+    public WeatherData() {
+    }
 
+    /**
+     * Konstruktor für das WeatherData-Objekt.
+     *
+     * @param condition   Wetterzustand (z. B. "Sonnig").
+     * @param temperature Temperatur in Celsius.
+     * @param humidity    Luftfeuchtigkeit in Prozent.
+     * @param uvIndex     UV-Index.
+     * @param windKph     Windgeschwindigkeit in km/h.
+     * @param windDir     Windrichtung.
+     * @param cityName    Name der Stadt.
+     */
     public WeatherData(String condition, double temperature, int humidity, double uvIndex, double windKph, String windDir, String cityName) {
         this.condition = condition;
         this.temperature = temperature;
@@ -21,7 +41,8 @@ public class WeatherData {
         this.cityName = cityName;
     }
 
-    // Getters
+    // Getter-Methoden
+
     public String getCondition() {
         return condition;
     }
@@ -49,7 +70,4 @@ public class WeatherData {
     public String getCityName() {
         return cityName;
     }
-
-
-
 }
