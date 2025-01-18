@@ -7,7 +7,7 @@ Schön, dass du hier bist! Diese kleine, aber feine Anwendung hilft dir dabei, d
 ## **Was kann die App?**
 
 - **Stadtwetter suchen:**  
-  Gib einfach den Namen einer Stadt in das Textfeld ein und klicke auf **"Suche Stadt"**. Schon bekommst du Infos wie:
+  Gib einfach den Namen einer Stadt in das Textfeld ein und klicke auf **"Search City"**. Schon bekommst du Infos wie:
   - Aktueller Wetterzustand (z. B. Sonnig, Wolkig)
   - Temperatur
   - Luftfeuchtigkeit
