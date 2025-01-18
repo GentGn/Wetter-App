@@ -11,23 +11,19 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
+    <TextField fx:id="CityNameField" prefHeight="25.0" prefWidth="183.0" promptText="Enter Cityname" />
+    <Button mnemonicParsing="false" onAction="#onSearchCityButtonClick" text="Search City" />
+    <Label fx:id="WeatherDetailsForCity" text="Weather details for your City" />
+
     <Label fx:id="conditionLabel" text="Condition: " />
     <Label fx:id="temperatureLabel" text="Temperature: " />
     <Label fx:id="humidityLabel" text="Humidity: " />
     <Label fx:id="uvIndexLabel" text="UV Index: " />
-    <Label fx:id="welcomeText" />
-    <Button onAction="#onShowWeatherButton" text="Show Weather" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
+    <Label fx:id="windInfoLabel" text="Wind Info will appear here" wrapText="true" />
+    <Button onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;" text="Toggle Wind Info" />
 
     <Button mnemonicParsing="false" onAction="#onShowCityWithTheHighestTemperatureButtonClick" text="Show city with the highest Temperature" />
    <Label fx:id="CityWithTheHighestTemperature" text="City with the highest Temperature:" wrapText="true" VBox.vgrow="ALWAYS" />
 
-   <TextField fx:id="CityNameField" prefHeight="25.0" prefWidth="183.0" promptText="Enter Cityname" />
-   <Button mnemonicParsing="false" onAction="#onSearchCityButtonClick" text="Search City" />
-   <Label fx:id="WeatherDetailsForCity" text="Weather details for your City" />
-
-    <Button onAction="#onFetchWeatherClick" text="Fetch Weather Data" />
-    <Button onAction="#onToggleWindInfoClick" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 2 4;" text="Toggle Wind Info" />
-    <Label fx:id="windInfoLabel" text="Wind Info will appear here" wrapText="true" />
 
 </VBox>
