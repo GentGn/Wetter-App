@@ -1,6 +1,6 @@
 # **Hallo und herzlich willkommen zu unserer Wetter-App!** 🌦️
 
-- Name (icXXbXXX@technikum-wien.at)
+- Helena (ic23b031@technikum-wien.at)
 - Muhammad (ic23b050@technikum-wien.at)
 - Gent (ic24b082@technikum-wien.at)
 
