@@ -54,7 +54,7 @@ Schön, dass du hier bist! Diese kleine, aber feine Anwendung hilft dir dabei, d
 - **JavaFX** sorgt für die benutzerfreundliche Oberfläche.  
 - **Multithreading** stellt sicher, dass die Wetterabfragen im Hintergrund laufen und die App nicht einfriert.  
 - **Datei-IO** speichert die Wetterdaten als JSON-Datei, damit du sie später wieder abrufen kannst.  
-- **Netzwerk**-Funktionalität (in Arbeit).  
+- **Netzwerk**-Funktionalität ermöglicht dir als Client-Anfragen und der Server liefert die Wetterdaten zurück.  
 
 ---
 
