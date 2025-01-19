@@ -1,5 +1,9 @@
 # **Hallo und herzlich willkommen zu unserer Wetter-App!** 🌦️
 
+- Name (icXXbXXX@technikum-wien.at)
+- Name (icXXbXXX@technikum-wien.at)
+- Gent (ic24b082@technikum-wien.at)
+
 Schön, dass du hier bist! Diese kleine, aber feine Anwendung hilft dir dabei, das aktuelle Wetter in Städten weltweit zu entdecken. Je nachdem, was die API so hergibt!
 
 ---
