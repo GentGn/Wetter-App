@@ -7,9 +7,7 @@ module at.fhtw.wetter_app {
     requires com.fasterxml.jackson.databind; // Für ObjectMapper und JSON-Bindung
 
     opens at.fhtw.wetter_app to javafx.fxml, com.fasterxml.jackson.databind;
-    opens at.fhtw.wetter_app.utilities to javafx.fxml, com.fasterxml.jackson.databind;
 
     // Exportiert die Pakete
     exports at.fhtw.wetter_app;
-    exports at.fhtw.wetter_app.utilities;
 }

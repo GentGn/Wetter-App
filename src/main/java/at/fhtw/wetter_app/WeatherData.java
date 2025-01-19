@@ -41,6 +41,15 @@ public class WeatherData {
         this.cityName = cityName;
     }
 
+    @Override
+    public String toString() {
+        return "Wetterdaten für " + cityName + ":\n" +
+                "Bedingung: " + condition + "\n" +
+                "Temperatur: " + temperature + " °C\n" +
+                "Luftfeuchtigkeit: " + humidity + "%\n" +
+                "UV-Index: " + uvIndex + "\n" +
+                "Wind: " + windKph + " km/h (" + windDir + ")";
+    }
     // Getter-Methoden
 
     public String getCondition() {

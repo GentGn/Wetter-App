@@ -1,6 +1,5 @@
 package at.fhtw.wetter_app;
 
-import at.fhtw.wetter_app.WeatherDataIO;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -159,10 +158,24 @@ public class HelloController {
     @FXML
     protected void onShowCityWithTheHighestTemperatureButtonClick() {
         List<String> cities = Arrays.asList(
-                "Tokyo", "Delhi", "Shanghai", "São Paulo", "Mexico City",
-                "Dhaka", "Kolkata", "Karachi", "Istanbul", "Buenos Aires",
-                "Chongqing", "Lagos", "Kinshasa", "Tianjin", "Jakarta",
-                "Kairo", "London"
+                "Tokyo", "Delhi", "Shanghai", "São Paulo", "Mexico City", "Cairo", "Mumbai", "Beijing", "Dhaka", "Osaka",
+                "New York City", "Karachi", "Buenos Aires", "Chongqing", "Istanbul", "Kolkata", "Manila", "Lagos", "Rio de Janeiro", "Tianjin",
+                "Kinshasa", "Guangzhou", "Lahore", "Bangalore", "Moscow", "Shenzhen", "Chennai", "Bogotá", "Jakarta", "Lima",
+                "Bangkok", "Hyderabad", "Seoul", "Nagoya", "London", "Chengdu", "Paris", "Nanjing", "Tehran", "Ho Chi Minh City",
+                "Luanda", "Wuhan", "Ahmedabad", "Hong Kong", "Kuala Lumpur", "Hangzhou", "Dongguan", "Foshan", "Shenyang",
+                "Riyadh", "Baghdad", "Santiago", "Surat", "Madrid", "Suzhou", "Pune", "Harbin", "Houston", "Dallas",
+                "Toronto", "Dar es Salaam", "Miami", "Singapore", "Philadelphia", "Atlanta", "Fukuoka", "Khartoum", "Barcelona", "Jinan",
+                "Saint Petersburg", "Qingdao", "Dalian", "Washington D.C.", "Hanoi", "Guadalajara", "Zhengzhou", "Boston", "Rome", "Changsha",
+                "Sydney", "Belo Horizonte", "Chittagong", "Kunming", "Nagpur", "Kano", "Accra", "Abidjan", "Ibadan", "Montreal",
+                "Casablanca", "Cape Town", "Durban", "Addis Ababa", "Medellín", "Recife", "Fortaleza", "Porto Alegre", "Brasília", "San Diego",
+                "Phoenix", "Curitiba", "Campinas", "Palembang", "Yokohama", "Shijiazhuang", "Alexandria", "Melbourne", "Hamburg", "Berlin",
+                "Munich", "Dubai", "Taipei", "Birmingham", "Naples", "Havana", "Colombo", "Baku", "Lusaka", "Kigali",
+                "Maputo", "Antananarivo", "Monrovia", "Douala", "Lomé", "Tashkent", "Tbilisi", "Ashgabat", "Kabul", "Sanaa",
+                "Pretoria", "Johannesburg", "Tunis", "Managua", "San Salvador", "Guatemala City", "Panama City", "Port-au-Prince", "Caracas", "Asunción",
+                "La Paz", "Quito", "Paramaribo", "Montevideo", "Sucre", "Santiago de los Caballeros", "Maracaibo", "Santa Cruz", "Puebla", "Querétaro",
+                "León", "Mérida", "Toluca", "Veracruz", "Córdoba", "Rosario", "Salta", "Neuquén", "Mendoza", "Posadas",
+                "Temuco", "Valparaíso", "Concepción", "Arequipa", "Trujillo", "Cochabamba", "Santa Marta", "Barranquilla", "Cartagena", "Mar del Plata",
+                "Bahía Blanca", "Resistencia", "San Miguel de Tucumán", "Barquisimeto", "Ciudad Guayana", "Puerto Ordaz", "Valencia", "Cumaná", "Barcelona", "Puerto La Cruz"
         );
 
         System.out.println("Suche nach der heißesten Stadt...");
